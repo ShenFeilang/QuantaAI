@@ -1,5 +1,5 @@
 .idea
 .gradio
-_pycache
+__pycache__
 resource/*
 config.py
