@@ -1,0 +1,62 @@
+,name,rqfactor,meaning,category,,source,is_proper
+2,Bollinger Bands,"SMA(CLOSE,20)",布林线基准，用于衡量股票价格的波动性和潜在的买卖点。,技术因子,,./resource/Zh\中国开放式基金的选股能力、...时能力和波动率择时能力分析_隋婷婷.pdf,TRUE
+12,MACD DEA,"EMA(EMA(CLOSE,12),9)",指数平滑移动平均线平滑移动平均线，反映价格趋势的稳定性。,技术因子,,./resource/Zh\企业碳排放对股票收益率的影响研究_兰丽玉.pdf,TRUE
+23,True Range,"MAX(MAX(HIGH-LOW,ABS(HIGH-CLOSE)),ABS(LOW-CLOSE))",真实幅值，反映价格波动的幅度。,技术因子,,./resource/Zh\企业碳排放对股票收益率的影响研究_兰丽玉.pdf,TRUE
+24,Price Momentum,"CLOSE-REF(CLOSE,1)",收盘价动量，反映价格趋势的强度。,技术因子,,./resource/Zh\企业碳排放对股票收益率的影响研究_兰丽玉.pdf,TRUE
+26,RSI Momentum,"RSI-REF(RSI,1)",RSI动量，反映RSI指标的趋势。,技术因子,,./resource/Zh\企业碳排放对股票收益率的影响研究_兰丽玉.pdf,TRUE
+28,On Balance Volume (OBV),"IF(CLOSE>REF(CLOSE,1),VOLUME,0)",累计/派发线，反映资金流入流出的情况。,技术因子,,./resource/Zh\企业碳排放对股票收益率的影响研究_兰丽玉.pdf,TRUE
+7,MACD,"2 * (EMA(CLOSE, 12) - EMA(CLOSE, 26))",异同移动平均线，衡量股票价格的趋势和动量，用于预测价格的未来走势。,技术因子,,./resource/Zh\基于AutoEncoder...ost的多因子股票策略研究_庄勇.pdf,TRUE
+5,Moving Average,MA,指移动平均线，通过将过去一段时间证券价格或指数的收盘价均值相连形成的曲线，帮助投资者快速判断股价的走势。,技术因子,,./resource/Zh\基于BAPM模型的Alpha动量反转策略研究_韩鹏.pdf,TRUE
+5,ATR6,"MA(MAX(ABS(HIGH-LOW), ABS(CLOSE-REF(CLOSE,1))), 6)",6日均幅指标，即6日内股价波动幅度的移动平均值，衡量股票在最近6个交易日的平均价格波动幅度。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+6,BIAS20,"((CLOSE-MA(CLOSE,20))/MA(CLOSE,20))*100",20日乖离率，表示20日股价偏离趋向指标的百分比值，衡量股票价格偏离其20日移动平均线的程度。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+7,BIAS60,"((CLOSE-MA(CLOSE,60))/MA(CLOSE,60))*100",60日乖离率，表示60日股价偏离趋向指标的百分比值，衡量股票价格偏离其60日移动平均线的程度。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+9,STM,"MA(CLOSE,20)-MA(CLOSE,10)",计算ADTM因子的中间变量，用于衡量股票价格相对于其20日移动平均线的偏离程度。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+10,UpRVI,"MA(CLOSE,20)-MA(CLOSE,50)",计算RVI因子的中间变量，用于衡量股票价格相对于其20日移动平均线的偏离程度。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+11,ChandeSU,"MA(CLOSE,20)-MA(CLOSE,100)",计算CMO因子的中间变量，用于衡量股票价格相对于其20日移动平均线的偏离程度。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+13,TRIX5,"EMA(EMA(EMA(CLOSE,5),5),5)",5日收盘价三重指数平滑移动平均指标，衡量股票价格在最近5个交易日的波动情况。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+14,TRIX10,"EMA(EMA(EMA(CLOSE,10),10),10)",10日收盘价三重指数平滑移动平均指标，衡量股票价格在最近10个交易日的波动情况。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+15,MA10RegressCoeff6,"SLOPE(CLOSE,10)",10日价格平均线6日线性回归系数，衡量股票价格在最近10个交易日的线性趋势。,技术因子,,./resource/Zh\基于Boosting算法的股票量化多因子选股研究_曹维凡.pdf,TRUE
+0,Market Value Total,"SUM(Factor('market_value_total'), 20)",基于 Barra 模型的总市值指标,基本面因子,,./resource/Zh\基于中证1000成份股的多...子选股与Alpha策略研究_张向阳.pdf,TRUE
+1,Market Value Circ,"SUM(Factor('market_value_circ'), 20)",基于 Barra 模型的流通市值,基本面因子,,./resource/Zh\基于中证1000成份股的多...子选股与Alpha策略研究_张向阳.pdf,TRUE
+2,NonLinear Size,"SUM(Factor('NonLinear_Size'), 20)",基于 Barra 模型的中性市值指标；总市值的立方与总市值截面回归的残差值,基本面因子,,./resource/Zh\基于中证1000成份股的多...子选股与Alpha策略研究_张向阳.pdf,TRUE
+5,Week Return Std,"STD(Factor('week_return_std'), 5)",前五个交易日的平均收益率标准差,技术因子,,./resource/Zh\基于中证1000成份股的多...子选股与Alpha策略研究_张向阳.pdf,TRUE
+15,Price to Earnings Ratio Inverse,1 / PE,衡量公司市盈率的倒数，反映市场对公司未来盈利能力的预期。,基本面因子,,./resource/Zh\基于创业板市场的多因子Alpha策略设计_王玉甜.pdf,TRUE
+1,BP,1 / PB,市净率倒数，衡量公司市场价值与账面价值的关系，用于评估公司资产的真实价值。,财务因子,,./resource/Zh\基于多因子选股模型的alpha策略实证研究_石松.pdf,TRUE
+30,VEMA26,"EMA(VOLUME, 26)",成交量的 26 日指数移动平均，衡量投资者情绪。,情绪因子,,./resource/Zh\基于多因子选股模型的alpha策略实证研究_石松.pdf,TRUE
+32,MAC120,"MA(CLOSE, 120)",120 日移动均线，衡量股票价格趋势。,技术因子,,./resource/Zh\基于多因子选股模型的alpha策略实证研究_石松.pdf,TRUE
+33,MAC60,"MA(CLOSE, 60)",60 日移动均线，衡量股票价格趋势。,技术因子,,./resource/Zh\基于多因子选股模型的alpha策略实证研究_石松.pdf,TRUE
+10,VEMA Volume Exponential Moving Average,"EMA(VOLUME, 30)",成交量的指数移动平均值，反映成交量的趋势。,技术因子,,./resource/Zh\基于投资者情绪的多因子量化选股实证研究_黄越婵.pdf,TRUE
+0,Earnings Yield,EPS/CLOSE,每股收益与股价的比率，反映了投资者每投入一元资金所能获得的每股收益。,基本面因子,,./resource/Zh\基于择时方法的动态多因子选股模型研究_韩营营.pdf,TRUE
+8,EMAC26,"EMA(CLOSE,26)",26日指数移动均线，通过指数加权平均计算得出，用于判断价格趋势。,技术因子,,./resource/Zh\基于机器学习的多因子选股组...测与Alpha对冲策略研究_袁亦方.pdf,TRUE
+13,TVMA20,"MA(VOLUME,20)",20日成交金额的移动平均值，通过计算得出，用于判断价格趋势。,技术因子,,./resource/Zh\基于机器学习的多因子选股组...测与Alpha对冲策略研究_袁亦方.pdf,TRUE
+14,TVMA6,"MA(VOLUME,6)",6日成交金额的移动平均值，通过计算得出，用于判断价格趋势。,技术因子,,./resource/Zh\基于机器学习的多因子选股组...测与Alpha对冲策略研究_袁亦方.pdf,TRUE
+15,TVSTD6,"STD(VOLUME,6)",6日成交金额的标准差，通过计算得出，用于判断价格波动。,技术因子,,./resource/Zh\基于机器学习的多因子选股组...测与Alpha对冲策略研究_袁亦方.pdf,TRUE
+6,Price,CLOSE,价格因子是指股票的当前价格。,技术因子,基础数据,./resource/Zh\基于沪深300和中证500...动量alpha策略实证研究_张龙.pdf,TRUE
+8,Skewness,"TS_SKEW(CLOSE,20)",偏度因子，通过计算最近20个交易日收盘价的偏度来衡量价格分布的对称性。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+9,Kurtosis,"TS_KURT(CLOSE,20)",峰度因子，通过计算最近20个交易日收盘价的峰度来衡量价格分布的尖峭程度。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+10,Slope,"SLOPE(CLOSE,20)",斜率因子，通过计算最近20个交易日收盘价的斜率来衡量价格趋势的变化速度。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+11,Volume,"SUM(VOLUME,20)/20",成交量因子，通过计算最近20个交易日成交量的平均值来衡量成交量的变化情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+12,Price,"SUM(CLOSE,20)/20",收盘价因子，通过计算最近20个交易日收盘价的平均值来衡量价格的变化情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+13,Return,"PCT_CHANGE(CLOSE,20)",收益率因子，通过计算最近20个交易日收盘价的收益率来衡量价格的变化情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+14,Volume Change,"DELTA(VOLUME,20)",成交量变化因子，通过计算最近20个交易日成交量的变化率来衡量成交量的变化情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+15,Price Change,"DELTA(CLOSE,20)",价格变化因子，通过计算最近20个交易日收盘价的变化率来衡量价格的变化情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+16,Volume Rank,"TS_RANK(VOLUME,20)",成交量排名因子，通过计算最近20个交易日成交量的排名百分位来衡量成交量的相对大小。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+17,Price Rank,"TS_RANK(CLOSE,20)",价格排名因子，通过计算最近20个交易日收盘价的排名百分位来衡量价格的相对大小。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+18,Return Rank,"TS_RANK(PCT_CHANGE(CLOSE,20),20)",收益率排名因子，通过计算最近20个交易日收盘价的收益率排名百分位来衡量收益率的相对大小。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+19,Volume Correlation,"CORR(VOLUME,CLOSE,20)",成交量相关性因子，通过计算最近20个交易日成交量与收盘价的相关性来衡量成交量与价格之间的联动性。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+20,Price Correlation,"CORR(CLOSE,CLOSE,20)",价格相关性因子，通过计算最近20个交易日收盘价与收盘价的相关性来衡量价格与价格之间的联动性。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+21,Return Correlation,"CORR(PCT_CHANGE(CLOSE,20),PCT_CHANGE(CLOSE,20),20)",收益率相关性因子，通过计算最近20个交易日收益率与收益率的相关性来衡量收益率与收益率之间的联动性。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+22,Volume Variance,"VAR(VOLUME,20)",成交量方差因子，通过计算最近20个交易日成交量的方差来衡量成交量的波动情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+23,Price Variance,"VAR(CLOSE,20)",价格方差因子，通过计算最近20个交易日收盘价的方差来衡量价格波动情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+24,Return Variance,"VAR(PCT_CHANGE(CLOSE,20),20)",收益率方差因子，通过计算最近20个交易日收益率的方差来衡量收益率波动情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+28,Volume Standard Deviation,"STD(VOLUME,20)",成交量标准差因子，通过计算最近20个交易日成交量的标准差来衡量成交量的波动情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+30,Return Standard Deviation,"STD(PCT_CHANGE(CLOSE,20),20)",收益率标准差因子，通过计算最近20个交易日收益率的标准差来衡量收益率波动情况。,技术因子,,./resource/Zh\基于深度学习的股票Alpha量化模型研究_傅中杰.pdf,TRUE
+1,Alpha#7,0.7 * RANK((OPEN - CLOSE)),This factor is constructed using the rank of the difference between the opening price and the closing price. It is used to predict the stock price movement based on the opening and closing price difference.,技术因子,,./resource/Zh\基于量价特征组合的多因子选股模型_张若凡.pdf,TRUE
+5,Alpha#50,0.7 * RANK((CLOSE - OPEN)),This factor is constructed using the rank of the difference between the closing price and the opening price. It is used to predict the stock price movement based on the opening and closing price difference.,技术因子,,./resource/Zh\基于量价特征组合的多因子选股模型_张若凡.pdf,TRUE
+13,Alpha#83,"2.21 * RANK(CORRELATION((CLOSE - OPEN), DELAY(VOLUME, 1), 15))","This factor is constructed using the correlation between the difference between the closing price and the opening price, and the delay of the trading volume. It is used to predict the stock price movement based on the relationship between price and volume.",技术因子,,./resource/Zh\基于量价特征组合的多因子选股模型_张若凡.pdf,TRUE
+1,Volume Reversal,"DELAY(VOLUME,1)-VOLUME",指股票成交量在一定时间内的上涨或下跌趋势。动量因子通常表明成交量会继续沿着既定方向运动，而反转因子则基于成交量在一定周期后可能出现反转的假设，捕捉成交量的回调或反转机会。,技术因子,,./resource/Zh\机器学习在量化多因子模型中的应用研究_王楚.pdf,TRUE
+27,RealizedVolatility,"STD(CLOSE, 20)",实际波动率，代表波动率类因子，描述股票价格在一定时间内的波动幅度。,基本面因子,,./resource/Zh\细分行业的多因子量化投资模型构建及检验_姜维.pdf,TRUE
+15,MACD Difference,MACD_DIFF,指数平滑移动平均线差离值因子通过指数平滑移动平均线差离值来衡量价格的趋势强度和波动性。MACD差离值因子通常表明价格趋势的强度和波动性。,技术因子,,./resource/Zh\资产定价模型中高维Alpha检验及其应用研究_吕悦.pdf,TRUE
+14,Bollinger Bands,"SMA(CLOSE, 20) + 2 * STD(CLOSE, 20), SMA(CLOSE, 20) - 2 * STD(CLOSE, 20)","布林线基准，指SMA(CLOSE, 20)加减两倍SMA(CLOSE, 20)的标准差。",技术因子,,./resource/Zh\量化基金业绩及其影响因子比较分析_李婷婷.pdf,TRUE
+0,Management Factor,"REF(CLOSE,1)-DELAY(REF(CLOSE,1),1)",反映公司管理层的经营能力和策略，通过综合股权发行、应计、现金流、总资产增长率和投资资产比等指标构建。,基本面因子,,./resource/Zh\错误定价因子的构建及有效性检验_刘慧.pdf,TRUE
+2,Momentum,"SUM(CLOSE,3)-SUM(CLOSE,2)",反映股票价格在一定时间内的上涨或下跌趋势，通过过去3个月累计收益率衡量。,技术因子,,./resource/Zh\错误定价因子的构建及有效性检验_刘慧.pdf,TRUE

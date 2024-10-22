@@ -1,0 +1,5 @@
+.idea
+.gradio
+_pycache
+resource/*
+config.py
