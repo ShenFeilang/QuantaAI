@@ -1,23 +1,12 @@
 import gradio as gr
-from langchain_openai import ChatOpenAI
 from langchain.schema import AIMessage, HumanMessage
 import time
-from config import config
-
-api_key=config.api_key
-
-llm = ChatOpenAI(
-    model="glm-4-long",
-    openai_api_key=api_key,
-    openai_api_base="https://open.bigmodel.cn/api/paas/v4/",
-    temperature=0.1,
-    max_tokens=2048
-)
+from llm import llm
 
 
 def portfolio_explanation(portfolio, predicted_return):
     # 将每个股票的持仓转化为字符串列表
-    holdings = [f"\t{stock}: {percentage*100:.2f}%" for stock, percentage in portfolio.items() if percentage > 0.01]
+    holdings = [f"\t{stock}: {percentage * 100:.2f}%" for stock, percentage in portfolio.items() if percentage > 0.01]
 
     # 将列表转为逗号分隔的字符串
     holdings_str = ",\n ".join(holdings)
@@ -56,14 +45,14 @@ def predict(message, history):
 
 
 def change_photo():
-    return gr.Image(value='./resource/result.png', label='业绩走势',height=180)
+    return gr.Image(value='./resource/result.png', label='业绩走势', height=180)
 
 
 with gr.Blocks(theme=gr.themes.Soft(), fill_height=True, fill_width=True) as demo:
     with gr.Column(scale=4):
         gr.ChatInterface(predict, type="messages", title='智能投资策略', fill_height=True)
     with gr.Column(scale=1):
-        image = gr.Image(value='./resource/default.png', label='业绩走势',height=180)
+        image = gr.Image(value='./resource/default.png', label='业绩走势', height=180)
         image.select(change_photo, outputs=image)
 
 demo.launch(server_name="127.0.0.1", server_port=7860)

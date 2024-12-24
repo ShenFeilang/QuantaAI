@@ -6,8 +6,7 @@ import codecs
 from pydantic import BaseModel, Field
 from typing import List
 from filter import final_factors,risk_value
-from langchain_openai import ChatOpenAI
-from config import config
+from llm import llm
 
 
 class FinalAlpha(BaseModel):
@@ -68,16 +67,6 @@ prompt = [
     system_message,
     HumanMessage(content=human_message)
 ]
-
-api_key=config.api_key
-
-llm = ChatOpenAI(
-    model="glm-4-plus",
-    openai_api_key=api_key,
-    openai_api_base="https://open.bigmodel.cn/api/paas/v4/",
-    temperature=0.2,
-    max_tokens=2048
-)
 
 chain = llm | parser
 

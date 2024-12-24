@@ -7,8 +7,8 @@ from fastapi.responses import JSONResponse
 app = FastAPI()
 
 # 定义一个全局变量来存储传递的 label
-pre_value = None
-risk_value = None
+pre_value = [0,1,1,2,1,4]
+risk_value = 2.5
 
 # 允许跨域的来源（前端的域名或IP地址）
 origins = [
